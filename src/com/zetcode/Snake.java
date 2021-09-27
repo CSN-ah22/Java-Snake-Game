@@ -1,6 +1,8 @@
 package com.zetcode;
 
 import java.awt.EventQueue;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.JFrame;
 
 public class Snake extends JFrame {
@@ -10,7 +12,7 @@ public class Snake extends JFrame {
         initUI();
     }
     
-    private void initUI() {
+    public void initUI() {
         
         add(new Board());
                
@@ -24,10 +26,10 @@ public class Snake extends JFrame {
     
 
     public static void main(String[] args) {
-        
         EventQueue.invokeLater(() -> {
             JFrame ex = new Snake();
             ex.setVisible(true);
         });
+
     }
 }
